@@ -138,30 +138,37 @@ body{
   gap: 30px;
 }
 
-.hero-media{
-  position:relative;
-  width:min(1186px, 100%);
+.hero-stage{
+  position: relative;
+  width: min(1186px, 100%);
+  display:flex;
+  justify-content:center;
+  container-type: inline-size;
 }
+
 
 .hero-img{
   display:block;
-  width:min(912px, 100%);
+  width: min(912px, 86vw);
   height:auto;
-  margin: 0 auto;
   padding: 10px;
 }
 
-/* hero text overlay */
+
 .hero-overlay{
   position:absolute;
-  left: 0;
-  right: 0;
   top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  max-width: none;
+  text-align:center;
+
   display:flex;
   flex-direction:column;
   align-items:center;
-  text-align:center;
   gap: 6px;
+
   padding: 0 12px;
   pointer-events:none;
 }
@@ -170,26 +177,29 @@ body{
   margin:0;
   font-family:"Viaoda Libre", serif;
   color:#fff;
-  font-size: clamp(56px, 8vw, 190px);
+  font-size: clamp(56px, 14cqw, 190px);
   line-height: 1.0;
   font-weight:400;
+  white-space: nowrap;
 }
 
 .hero-name{
   margin:0;
   font-family:"Viaoda Libre", serif;
   color:#fff;
-  font-size: clamp(36px, 5vw, 90px);
+  font-size: clamp(42px, 7.5cqw, 90px);
   line-height: 1.05;
   font-weight:400;
+  white-space: nowrap;
 }
 
 .hero-tagline{
   margin:0;
   font-family:"Anton", sans-serif;
   color:#fff;
-  font-size: clamp(14px, 2vw, 24px);
+  font-size: clamp(10px, 1.7cqw, 24px);
   letter-spacing: .4px;
+  white-space: nowrap;
 }
 
 /* icons row */
@@ -335,7 +345,7 @@ body{
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 900px){
+@media (max-width: 700px){
   .nav-desktop{ display:none; }
   .nav-toggle{ display:block; }
 
