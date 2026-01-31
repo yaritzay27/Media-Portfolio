@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yaritza Yanez • Portfolio</title>
+
+  <!-- ----- Fonts ----- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Anton&family=Rozha+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#home">Portfolio</a>
+
+      <!-- Desktop/Tablet nav -->
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#creative">Creative Statement</a>
+        <a href="#featured">Featured Work</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="nav-mobile" aria-label="Mobile Primary">
+        <a data-close href="#home">Home</a>
+        <a data-close href="#creative">Creative Statement</a>
+        <a data-close href="#featured">Featured Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-media">
+          <img class="hero-img" src="img/background.png" alt="Hero artwork" />
+
+          <div class="hero-overlay">
+            <h1 class="hero-title">Artistic Portfolio</h1>
+            <h2 class="hero-name">Yaritza Yanez</h2>
+            <p class="hero-tagline">Designing Experiences Through Media and Motion</p>
+          </div>
+        </div>
+
+        <div class="hero-icons" aria-label="Social links">
+          <a class="icon" href="#" aria-label="GitHub">
+            <img src="icons/github_icon.png" alt="" />
+          </a>
+          <a class="icon" href="#" aria-label="LinkedIn">
+            <img src="icons/linkedIn_icon.png" alt="" />
+          </a>
+          <a class="icon" href="#" aria-label="Email">
+            <img src="icons/mail_icon.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="about" id="creative">
+      <div class="container">
+        <h2 class="section-title underline">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+                I am interested in creating media that integrates design and technology. I find visual storytelling to be interesting when it is intuitive and human. 
+                Something that is easily understood by anyone who views it, but also has levels of meaning as they continue to explore it. 
+                A lot of my work in creating media has been focused on exploring how design influences our experience of digital spaces, our ability to communicate ideas, and our relationship to the information that is being seen. 
+                I am very interested in media that combines structure and creativity, such as UI/UX design, digital graphics and interactive layouts which help guide users through a enjoyable experience rather than overwhelm them.
+            </p>
+            <p>
+                My process often begins with and observation of the way in which people interact with technology, what captures their attention, and what what prevents them from understanding. 
+                I enjoy breaking down complex ideas into simple and understandable concepts. I do this by focusing on the layout, color, and typography and ensuring it is eligible to the viewer. 
+                I work with tools such as Figma, Canva, Adobe, and code with front-end programming languages. However, I am interested and open to expand my practice to include more interactive and animated elements. 
+                Overall, my goal as a designer is to create work that feels thoughtful, accessible, and intentional. 
+                Create a design that not only looks good, but also serves a clear purpose and leaves the viewer curious to explore more.
+            </p>
+          </div>
+
+          <div class="about-image" aria-label="About image placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Work ===== -->
+    <section class="featured" id="featured">
+      <div class="container">
+        <h2 class="section-title underline section-title--light">Featured Work</h2>
+
+        <div class="featured-grid">
+          <!-- Card 1 -->
+          <a class="work-card" href="work.html">
+            <div class="frame">
+              <!-- artwork behind -->
+              <img class="frame-art" src="img/temp_img.png" alt="A Reflection on In Plato's Cave" />
+              <!-- frame on top -->
+              <img class="frame-png" src="img/img_frame.png" alt="" aria-hidden="true" />
+            </div>
+
+            <div class="work-meta">
+              <h3 class="work-title">A Reflection on <br>'In Plato's Cave'</h3>
+              <p class="work-date">February 9th</p>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a class="work-card" href="#">
+            <div class="frame">
+              <img class="frame-art" src="img/temp_img.png" alt="Artwork Title" />
+              <img class="frame-png" src="img/img_frame.png" alt="" aria-hidden="true" />
+            </div>
+
+            <div class="work-meta">
+              <h3 class="work-title">Artwork Title</h3>
+              <p class="work-date">Date</p>
+            </div>
+          </a>
+
+          <!-- Card 3 -->
+          <a class="work-card" href="#">
+            <div class="frame">
+              <img class="frame-art" src="img/temp_img.png" alt="Artwork Title" />
+              <img class="frame-png" src="img/img_frame.png" alt="" aria-hidden="true" />
+            </div>
+
+            <div class="work-meta">
+              <h3 class="work-title">Artwork Title</h3>
+              <p class="work-date">Date</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
