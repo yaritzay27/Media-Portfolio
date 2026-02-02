@@ -146,14 +146,12 @@ body{
   container-type: inline-size;
 }
 
-
 .hero-img{
   display:block;
   width: min(912px, 86vw);
   height:auto;
   padding: 10px;
 }
-
 
 .hero-overlay{
   position:absolute;

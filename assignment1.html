@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Reflection on 'In Plato's Cave' • Yaritza Yanez</title>
+
+  <!-- ----- Fonts ----- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Anton&family=Rozha+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --plum:#402437;
+      --text:#1F2937;
+      --muted:#4B5563;
+      --border:#E5E7EB;
+
+      --container: 1200px;
+      --pad: clamp(18px, 4vw, 64px);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--text);
+    }
+
+    .container{
+      width:min(var(--container), 100% - (var(--pad) * 2));
+      margin:0 auto;
+    }
+
+    .underline{
+      text-decoration: underline;
+      text-underline-offset: 10px;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .site-header{
+      background: rgba(255,255,255,.90);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 16px 0;
+    }
+
+    .brand{
+      font-family: "Viaoda Libre", serif;
+      font-size: 32px;
+      line-height: 32px;
+      text-decoration:none;
+      color:var(--text);
+    }
+
+    .nav-desktop{
+      display:flex;
+      align-items:center;
+      gap: 40px;
+    }
+
+    .nav-desktop a{
+      font-family:"Rozha One", serif;
+      font-size:20px;
+      line-height: 26px;
+      color:var(--muted);
+      text-decoration:none;
+    }
+
+    .nav-desktop a:hover,
+    .nav-mobile a:hover{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+
+    /* Hamburger button */
+    .nav-toggle{
+      display:none;
+      background:none;
+      border:0;
+      cursor:pointer;
+      padding: 6px;
+    }
+
+    .hamburger{
+      width: 28px;
+      height: 2px;
+      background: var(--text);
+      display:block;
+      position:relative;
+    }
+
+    .hamburger::before,
+    .hamburger::after{
+      content:"";
+      position:absolute;
+      left:0;
+      width:28px;
+      height:2px;
+      background: var(--text);
+    }
+
+    .hamburger::before{ top:-8px; }
+    .hamburger::after{ top:8px; }
+
+    /* Mobile dropdown wrapper */
+    .mobile-menu{
+      background: transparent;
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+    }
+
+    .mobile-menu[hidden]{
+      display: none;
+    }
+
+    .nav-mobile{
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+      padding: 16px var(--pad);
+    }
+
+    .nav-mobile a{
+      font-family:"Rozha One", serif;
+      font-size:18px;
+      color:var(--muted);
+      text-decoration:none;
+    }
+
+    /* ===== ASSIGNMENT PAGE ===== */
+    .assignment-page{
+      background: #fff;
+      padding: 60px 0 80px;
+    }
+
+    .page-title{
+      font-family:"Viaoda Libre", serif;
+      font-weight:400;
+      font-size: clamp(34px, 4vw, 54px);
+      text-align:center;
+      margin: 0 0 50px;
+      line-height: 1.1;
+      text-decoration: underline;
+      text-underline-offset: 10px;
+    }
+
+    .assignment-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: start;
+    }
+
+    .text-column{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .text-column p{
+      font-family:"Amiri", serif;
+      font-size:17px;
+      line-height: 25.6px;
+      margin: 0;
+    }
+
+    .image-column{
+      width: 378px;
+      height: 477px;
+      background: var(--plum);
+      aspect-ratio: 0.7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 700px){
+      .nav-desktop{ display:none; }
+      .nav-toggle{ display:block; }
+
+      .assignment-content{
+        grid-template-columns: 1fr;
+      }
+
+      .image-column{
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="index.html">Portfolio</a>
+
+      <!-- Desktop/Tablet nav -->
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#creative">Creative Statement</a>
+        <a href="index.html#featured">Assignments</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="nav-mobile" aria-label="Mobile Primary">
+        <a data-close href="index.html">Home</a>
+        <a data-close href="index.html#creative">Creative Statement</a>
+        <a data-close href="index.html#featured">Assignments</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <main class="assignment-page">
+    <div class="container">
+      <h1 class="page-title">A Reflection on 'In Plato's Cave'</h1>
+
+      <div class="assignment-content">
+        <!-- Left Column: Text -->
+        <div class="text-column">
+          <p>
+            Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.
+          </p>
+          <p>
+            Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum eu nisl.
+          </p>
+        </div>
+
+        <!-- Right Column: Image -->
+        <div class="image-column"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (navToggle && mobileMenu) {
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.hidden = isExpanded;
+      });
+
+      // Close menu when clicking a link
+      const mobileLinks = mobileMenu.querySelectorAll('[data-close]');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navToggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.hidden = true;
+        });
+      });
+    }
+  </script>
+</body>
+</html>
