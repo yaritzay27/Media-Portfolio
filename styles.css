@@ -102,7 +102,7 @@ body{
 
 /* Mobile dropdown wrapper */
 .mobile-menu{
-  background: rgba(255,255,255,.98);
+  background: transparent;
   border-bottom: 1px solid var(--border);
   width: 100%;
 }
@@ -160,7 +160,7 @@ body{
   top: 28%;
   left: 50%;
   transform: translateX(-50%);
-  width: 120%;
+  width: 100%;
   max-width: none;
   text-align:center;
 
@@ -187,7 +187,7 @@ body{
   margin:0;
   font-family:"Viaoda Libre", serif;
   color:#fff;
-  font-size: clamp(42px, 7.5cqw, 90px);
+  font-size: clamp(42px, 8.5cqw, 90px);
   line-height: 1.05;
   font-weight:400;
   white-space: nowrap;
@@ -197,7 +197,7 @@ body{
   margin:0;
   font-family:"Anton", sans-serif;
   color:#fff;
-  font-size: clamp(10px, 1.7cqw, 24px);
+  font-size: clamp(10px, 2cqw, 24px);
   letter-spacing: .4px;
   white-space: nowrap;
 }
@@ -270,78 +270,112 @@ body{
 .featured{
   background: var(--plum);
   padding: 60px 0;
-  overflow:hidden;
+  overflow: hidden;
+}
+
+.work-scroller{
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-padding-left: 10px;
+  scroll-padding-right: 10px;
+
+  padding: 10px 6px 18px;
+  cursor: grab;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.work-scroller::-webkit-scrollbar{
+  display: none;
+}
+
+.work-scroller.is-dragging{
+  cursor: grabbing;
+}
+
+.work-scroller.is-auto{
+  scroll-snap-type: none;
+  scroll-behavior: auto;
 }
 
 .featured-grid{
-  display:flex;
-  flex-wrap:nowrap;
-  justify-content:center;
+  display: flex;
+  flex-wrap: nowrap;
   gap: 80px;
+  width: max-content;
   padding: 0 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
+/* Card */
 .work-card{
+  flex: 0 0 auto;
   width: 352px;
-  text-decoration:none;
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:20px;
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  scroll-snap-align: center;
 }
 
 .frame{
-  width:352px;
-  height:436.44px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  width: 352px;
+  height: 436.44px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .frame-art{
-  position:absolute;
+  position: absolute;
   inset: 42px 46px 52px 46px;
-  width:calc(100% - 92px);
-  height:calc(100% - 94px);
-  object-fit:cover;
-  z-index:1;
+  width: calc(100% - 92px);
+  height: calc(100% - 94px);
+  object-fit: cover;
+  z-index: 1;
 }
 
 .frame-png{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  z-index:2;
-  pointer-events:none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.work-meta{
-  display:flex;
-  flex-direction:column;
+.work-description{
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  align-items:center;
+  align-items: center;
 }
 
 .work-title{
-  font-family:"Viaoda Libre", serif;
-  font-weight:400;
-  font-size:36px;
+  font-family: "Viaoda Libre", serif;
+  font-weight: 400;
+  font-size: 36px;
   line-height: 46.8px;
-  margin:0;
-  text-align:center;
+  margin: 0;
+  text-align: center;
 }
 
 .work-date{
-  font-family:"Amiri", serif;
-  font-weight:400;
-  font-size:32px;
+  font-family: "Amiri", serif;
+  font-weight: 400;
+  font-size: 32px;
   line-height: 46.8px;
-  margin:0;
-  text-align:center;
+  margin: 0;
+  text-align: center;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
