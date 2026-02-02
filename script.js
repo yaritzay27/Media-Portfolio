@@ -34,8 +34,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = Array.from(scroller.querySelectorAll(".work-card"));
 
   // ===== SPEED SETTINGS =====
-  const MAX_SPEED = 0.6;
+  const DESKTOP_SPEED = 0.6; // Desktop auto-scroll speed
+  const MOBILE_SPEED = 2.5;  // Mobile auto-scroll speed
   const EASE = 0.06;
+
+  // Detect if device is mobile or tablet
+  const isMobileOrTablet = () => {
+    const ua = navigator.userAgent || "";
+
+    const isPhone = /iPhone|iPod|Android.*Mobile|Windows Phone/i.test(ua);
+    const isIpad = /iPad/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    const isTablet = /Android(?!.*Mobile)/i.test(ua) || /Tablet/i.test(ua) || isIpad;
+
+    return isPhone || isTablet;
+  };
+
+  const MAX_SPEED = isMobileOrTablet() ? MOBILE_SPEED : DESKTOP_SPEED;
 
   // ===== STATE VARIABLES =====
   let currentSpeed = MAX_SPEED;
@@ -46,10 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let isHovering = false;
   let rafId = null;
   let isTouching = false;
+  let resumeTimeout = null;
 
   // ===== ACCESSIBILITY: Check if user prefers reduced motion =====
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  if (reduceMotion.matches) targetSpeed = 0; // Stop auto-scroll for accessibility
+  if (reduceMotion.matches) targetSpeed = 0;
 
   // ===== HELPER FUNCTIONS =====
   const maxScrollLeft = () => scroller.scrollWidth - scroller.clientWidth;
@@ -76,34 +91,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===== MAIN ANIMATION LOOP =====
   function loop() {
-    if (!isHovering) {
+
+    if (!isHovering && !isTouching) {
       currentSpeed += (targetSpeed - currentSpeed) * EASE;
     }
 
     const max = maxScrollLeft();
 
-    if (!isHovering && !pauseMode && !pinnedCard) {
+    if (!isHovering && !pauseMode && !pinnedCard && !isTouching) {
       if (max > 0 && Math.abs(currentSpeed) > 0.001) {
         scroller.scrollLeft += currentSpeed;
         
-        if (scroller.scrollLeft >= max - 1) scroller.scrollLeft = 0;
+        if (scroller.scrollLeft >= max - 1) {
+          scroller.scrollLeft = 0;
+        }
       }
     }
 
+    // DESKTOP: Center hovered card
     if (pinnedCard && isHovering) {
       const desired = centerScrollLeftFor(pinnedCard);
       const current = scroller.scrollLeft;
       const diff = desired - current;
 
       if (Math.abs(diff) > 0.5) {
-        scroller.scrollLeft += diff * 0.04; // 0.04 = transition speed when switching between cards
-      } 
-      
-      else {
+        scroller.scrollLeft += diff * 0.04;
+      } else {
         scroller.scrollLeft = desired;
         pauseMode = true;
       }
     }
+    
     rafId = requestAnimationFrame(loop);
   }
 
@@ -142,23 +160,30 @@ document.addEventListener("DOMContentLoaded", () => {
   // DESKTOP: When mouse leaves the entire scroller, resume auto-scroll
   scroller.addEventListener("mouseleave", unpinAndResume);
 
-  // MOBILE: When user taps a card, pin/center it
-  cards.forEach(card => {
-    card.addEventListener("touchstart", () => pinTo(card), { passive: true });
-  });
-
-  // MOBILE: When touch ends, resume auto-scroll
-  scroller.addEventListener("touchend", unpinAndResume, { passive: true });
-  
-  // MOBILE/DESKTOP: When user starts dragging, stop auto-scroll
-  scroller.addEventListener("pointerdown", () => {
+  // MOBILE: Stop auto-scroll when touching
+  scroller.addEventListener("touchstart", () => {
+    isTouching = true;
+    currentSpeed = 0;
     targetSpeed = 0;
-    isHovering = true;
-  });
-  
-  // MOBILE/DESKTOP: When user stops dragging, resume
-  scroller.addEventListener("pointerup", unpinAndResume);
-  scroller.addEventListener("pointercancel", unpinAndResume);
+    
+    if (resumeTimeout) {
+      clearTimeout(resumeTimeout);
+      resumeTimeout = null;
+    }
+  }, { passive: true });
+
+  // MOBILE: Resume auto-scroll after touch ends (with delay)
+  scroller.addEventListener("touchend", () => {
+    isTouching = false;
+    
+    if (reduceMotion.matches) return;
+    
+    resumeTimeout = setTimeout(() => {
+      targetSpeed = MAX_SPEED;
+      pauseMode = false;
+      pinnedCard = null;
+    }, 2000);
+  }, { passive: true });
 
   // ===== ACCESSIBILITY =====
   reduceMotion.addEventListener("change", e => {
