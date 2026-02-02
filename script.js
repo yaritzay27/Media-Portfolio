@@ -28,7 +28,6 @@ if (!toggle || !mobileMenu) {
 
 // ===== Scroll Bar ===== //
 document.addEventListener("DOMContentLoaded", () => {
-  
   const scroller = document.getElementById("workScroller");
   if (!scroller) return;
 
@@ -46,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let pauseMode = false;
   let isHovering = false;
   let rafId = null;
+  let isTouching = false;
 
   // ===== ACCESSIBILITY: Check if user prefers reduced motion =====
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -107,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
     rafId = requestAnimationFrame(loop);
   }
 
-
   rafId = requestAnimationFrame(loop);
 
   // ===== EVENT HANDLERS =====
@@ -146,7 +145,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // MOBILE: When user taps a card, pin/center it
   cards.forEach(card => {
     card.addEventListener("touchstart", () => pinTo(card), { passive: true });
-    // passive: true = improves scroll performance
   });
 
   // MOBILE: When touch ends, resume auto-scroll
