@@ -257,11 +257,21 @@ body{
 }
 
 .about-image{
-  width: 378px;
-  height: 477px;
-  border: var(--plum), 10px solid;
+  width: clamp(260px, 40vw, 378px);
+  aspect-ratio: 378 / 477;
+  border: 10px solid var(--plum);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
 }
+
+.about-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 /* ===== FEATURED WORK ===== */
 .featured{
@@ -431,21 +441,20 @@ body{
 }
 
 @media (max-width: 600px){
-  .hero-icons{
-    gap: 28px;
-  }
-  
-  .work-title{
-    line-height: 1.2;
-  }
+  .hero-icons{ gap: 28px; }
 
-  .work-date{
-    line-height: 1.1;
-  }
+  .work-title{ line-height: 1.2; }
+
+  .work-date{ line-height: 1.1; }
 
   .footer-inner{
     flex-direction: column;
     gap: 10px;
     text-align: center;
+  }
+
+  .about-image{
+    border-width: 10px;
+    box-sizing: border-box;
   }
 }
