@@ -209,20 +209,19 @@ body{
 }
 
 .icon{
-  width:34px;
-  height:34px;
+  width: clamp(22px, 4vw, 34px);
+  height: clamp(22px, 4vw, 34px);
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  text-decoration:none;
 }
 
 .icon img{
-  width:34px;
-  height:34px;
+  width: 100%;
+  height: 100%;
   object-fit:contain;
-  display:block;
 }
+
 
 /* ===== ABOUT ===== */
 .about{
@@ -324,8 +323,8 @@ body{
 }
 
 .frame{
-  width: 352px;
-  height: 436.44px;
+  width: clamp(260px, 80vw, 352px);
+  aspect-ratio: 352 / 436.44;
   position: relative;
   display: flex;
   align-items: center;
@@ -361,7 +360,7 @@ body{
 .work-title{
   font-family: "Viaoda Libre", serif;
   font-weight: 400;
-  font-size: 36px;
+  font-size: clamp(22px, 3.5vw, 36px);
   line-height: 46.8px;
   margin: 0;
   text-align: center;
@@ -370,7 +369,7 @@ body{
 .work-date{
   font-family: "Amiri", serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: clamp(18px, 3vw, 32px);
   line-height: 46.8px;
   margin: 0;
   text-align: center;
@@ -432,6 +431,18 @@ body{
 }
 
 @media (max-width: 600px){
+  .hero-icons{
+    gap: 28px;
+  }
+  
+  .work-title{
+    line-height: 1.2;
+  }
+
+  .work-date{
+    line-height: 1.1;
+  }
+
   .footer-inner{
     flex-direction: column;
     gap: 10px;
