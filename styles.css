@@ -397,6 +397,10 @@ body{
   user-select: none;
 }
 
+.work-card .frame{
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+}
 
 /* ===== FOOTER ===== */
 .site-footer{
@@ -471,5 +475,11 @@ body{
   .about-image{
     border-width: 10px;
     box-sizing: border-box;
+  }
+}
+
+@media (hover: hover){
+  .work-card:hover .frame{
+    transform: translateY(-12px) scale(1.02);
   }
 }
