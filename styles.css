@@ -531,13 +531,41 @@ body{
 }
 
 .image-column{
-  width: clamp(280px, 38vw, 480px);
+  width: clamp(280px, 38vw, 378px);
   height: auto;
+  max-height: 477px;
   background: var(--plum);
   aspect-ratio: 0.7;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Download button - white theme */
+.download-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding: 8px 26px;
+  border-radius: 10px;
+
+  background: var(--plum);
+  border: 3px solid #b77745;
+
+  font-family:"Viaoda Libre", serif;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #fff;
+
+  text-decoration:none;
+  transition: all 160ms ease;
+  cursor: pointer;
+}
+
+.download-btn:hover{
+  transform: translateY(-3px);
+  text-decoration: underline;
 }
 
 
@@ -642,6 +670,52 @@ body{
 
 .assignment-btn-purple:hover{
   transform: translateY(-3px);
+  text-decoration: underline;
+}
+
+/* Specific 1920x1080 image - full size */
+.assignment-img-1980X1080{
+  width: 1920px;
+  height: 1080px;
+  display:block;
+
+  border: 6px solid #fff;
+  background: transparent;
+  object-fit: cover;
+}
+
+/* Center single media without text */
+.assignment-grid-purple-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Download button - purple theme */
+.download-btn-purple{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding: 8px 26px;
+  border-radius: 10px;
+
+  background:#fff;
+  border: 3px solid #b77745;
+
+  font-family:"Viaoda Libre", serif;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--plum);
+
+  text-decoration:none;
+  transition: all 160ms ease;
+  cursor: pointer;
+}
+
+.download-btn-purple:hover{
+  transform: translateY(-3px);
+  text-decoration: underline;
 }
 
 /* responsive */
