@@ -350,6 +350,15 @@ body{
   z-index: 1;
 }
 
+.frame-art-susan{
+  position: absolute;
+  inset: 42px 46px 52px 68px;
+  width: calc(100% - 92px);
+  height: calc(100% - 94px);
+  object-fit: cover;
+  z-index: 1;
+}
+
 .frame-png{
   position: absolute;
   inset: 0;
