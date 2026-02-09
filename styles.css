@@ -515,6 +515,19 @@ body{
   gap: clamp(28px, 6vw, 120px);
 }
 
+.text-middle{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: "Amiri", serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.text-middle p{
+  margin: 0 0 28px;
+}
+
 .text-column{
   flex: 1;
   max-width: 560px;
