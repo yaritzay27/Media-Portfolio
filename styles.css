@@ -624,6 +624,12 @@ body{
   margin: 0 0 28px;
 }
 
+.assignment-text-purple-wide{
+  font-family: "Amiri", serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
 /* right media */
 .assignment-media-purple{
   display:flex;
@@ -660,6 +666,28 @@ body{
   object-fit: cover;
 }
 
+/* Specific 1920x1080 image - full size */
+.assignment-img-1980X1080{
+  width: 1920px;
+  height: 1080px;
+  display:block;
+
+  border: 6px solid #fff;
+  background: transparent;
+  object-fit: cover;
+}
+
+.assignment-img-1920{
+  width: min(100%, 960px);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  
+  border: 6px solid #fff;
+  background: transparent;
+  object-fit: cover;
+  display:block;
+}
+
 .assignment-caption-purple{
   margin: 0;
   font-family:"Viaoda Libre", serif;
@@ -693,17 +721,6 @@ body{
 .assignment-btn-purple:hover{
   transform: translateY(-3px);
   text-decoration: underline;
-}
-
-/* Specific 1920x1080 image - full size */
-.assignment-img-1980X1080{
-  width: 1920px;
-  height: 1080px;
-  display:block;
-
-  border: 6px solid #fff;
-  background: transparent;
-  object-fit: cover;
 }
 
 /* Center single media without text */
