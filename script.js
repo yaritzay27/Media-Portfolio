@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // LIGHTBOX FOR ASSIGNMENT IMAGES
-document.querySelectorAll('.assignment-img-1920, .assignment-img-5x7, .assignment-img-purple')
+document.querySelectorAll('.lightbox-img')
   .forEach(img => {
     img.style.cursor = 'zoom-in';
 

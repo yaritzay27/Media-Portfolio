@@ -801,3 +801,7 @@ body{
   border: 8px solid #fff;
   box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
+
+.lightbox-img{
+  cursor: zoom-in;
+}
