@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yaritza Yanez • Portfolio</title>
 
-  <!-- ----- Fonts ----- -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Anton&family=Rozha+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -19,20 +22,17 @@
     <div class="header-inner container">
       <a class="brand" href="#home">Portfolio</a>
 
-      <!-- Desktop/Tablet nav -->
       <nav class="nav-desktop" aria-label="Primary">
         <a href="#home">Home</a>
         <a href="#creative">Creative Statement</a>
         <a href="#featured">Featured Work</a>
       </nav>
 
-      <!-- Mobile hamburger -->
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span class="hamburger" aria-hidden="true"></span>
       </button>
     </div>
 
-    <!-- Mobile dropdown -->
     <div class="mobile-menu" id="mobileMenu" hidden>
       <nav class="nav-mobile" aria-label="Mobile Primary">
         <a data-close href="#home">Home</a>
@@ -47,16 +47,28 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-stage">
+          <!-- Background stays still -->
           <img class="hero-img" src="img/background.png" alt="Hero artwork" />
 
+          <!-- FLOAT UP EVERYTHING IN HERO (text only wrapper so it doesn't conflict with transforms) -->
           <div class="hero-overlay">
-            <h1 class="hero-title">Artistic Portfolio</h1>
-            <h2 class="hero-name">Yaritza Yanez</h2>
-            <p class="hero-tagline">Designing Experiences Through Media and Motion</p>
+            <div class="hero-overlay-anim"
+                 data-aos="fade-up"
+                 data-aos-duration="1000"
+                 data-aos-easing="ease-out-cubic">
+              <h1 class="hero-title">Artistic Portfolio</h1>
+              <h2 class="hero-name">Yaritza Yanez</h2>
+              <p class="hero-tagline">Designing Experiences Through Media and Motion</p>
+            </div>
           </div>
         </div>
 
-        <div class="hero-icons" aria-label="Social links">
+        <!-- Icons float up-->
+        <div class="hero-icons"
+             aria-label="Social links"
+             data-aos="fade-up"
+             data-aos-duration="1000"
+             data-aos-easing="ease-out-cubic">
           <a class="icon" href="https://github.com/yaritzay27" aria-label="GitHub">
             <img src="icons/github_icon.png" alt="GitHub Icon" />
           </a>
@@ -71,119 +83,140 @@
     </section>
 
     <!-- ===== About ===== -->
+    <!-- Put AOS on the container so the section background stays still -->
     <section class="about" id="creative">
-      <div class="container">
+      <div class="container"
+           data-aos="fade-up"
+           data-aos-duration="900"
+           data-aos-offset="120">
         <h2 class="section-title underline">About Me</h2>
 
         <div class="about-grid">
           <div class="about-text">
             <p>
-                I am interested in creating media that integrates design and technology. I find visual storytelling to be interesting when it is intuitive and human. 
-                Something that is easily understood by anyone who views it, but also has levels of meaning as they continue to explore it. 
-                A lot of my work in creating media has been focused on exploring how design influences our experience of digital spaces, our ability to communicate ideas, and our relationship to the information that is being seen. 
-                I am very interested in media that combines structure and creativity, such as UI/UX design, digital graphics and interactive layouts which help guide users through a enjoyable experience rather than overwhelm them.
+              I am interested in creating media that integrates design and technology. I find visual storytelling to be
+              interesting when it is intuitive and human. Something that is easily understood by anyone who views it, but
+              also has levels of meaning as they continue to explore it. A lot of my work in creating media has been focused
+              on exploring how design influences our experience of digital spaces, our ability to communicate ideas, and our
+              relationship to the information that is being seen. I am very interested in media that combines structure and
+              creativity, such as UI/UX design, digital graphics and interactive layouts which help guide users through a
+              enjoyable experience rather than overwhelm them.
             </p>
             <p>
-                My process often begins with and observation of the way in which people interact with technology, what captures their attention, and what what prevents them from understanding. 
-                I enjoy breaking down complex ideas into simple and understandable concepts. I do this by focusing on the layout, color, and typography and ensuring it is eligible to the viewer. 
-                I work with tools such as Figma, Canva, Adobe, and code with front-end programming languages. However, I am interested and open to expand my practice to include more interactive and animated elements. 
-                Overall, my goal as a designer is to create work that feels thoughtful, accessible, and intentional. 
-                Create a design that not only looks good, but also serves a clear purpose and leaves the viewer curious to explore more.
+              My process often begins with an observation of the way in which people interact with technology, what captures
+              their attention, and what prevents them from understanding. I enjoy breaking down complex ideas into simple and
+              understandable concepts. I do this by focusing on the layout, color, and typography and ensuring it is eligible
+              to the viewer. I work with tools such as Figma, Canva, Adobe, and code with front-end programming languages.
+              However, I am interested and open to expand my practice to include more interactive and animated elements.
+              Overall, my goal as a designer is to create work that feels thoughtful, accessible, and intentional.
             </p>
           </div>
 
-          <img class="about-image" src="img/vacation_img.png" alt="Selfportrait"></img>
+          <img class="about-image" src="img/vacation_img.png" alt="Selfportrait" />
         </div>
       </div>
     </section>
 
     <!-- ===== Featured Work ===== -->
+    <!-- Put AOS on the container so the purple background stays still -->
     <section class="featured" id="featured">
-      <div class="container">
+      <div class="container"
+           data-aos="fade-up"
+           data-aos-duration="900"
+           data-aos-offset="120">
         <h2 class="section-title underline section-title--light">Featured Work</h2>
 
         <div class="work-scroller" id="workScroller">
           <div class="featured-grid">
-            <!-- Card 1 -->
+
             <a class="work-card" href="reflections/readings.html">
               <div class="frame">
-                <!-- artwork behind -->
                 <img class="frame-art-susan" src="img/Susan_Songtag.jpg" alt="A Reflection on In Plato's Cave" />
-                <!-- frame on top -->
                 <img class="frame-png" src="img/img_frame.png" alt="" aria-hidden="true" />
               </div>
-
               <div class="work-description">
                 <h3 class="work-title">A Reflection on <br>'In Plato's Cave'</h3>
                 <p class="work-date">February 9th</p>
               </div>
             </a>
 
-            <!-- Card 2 -->
             <a class="work-card" href="assignments/week1_assignment2.html">
               <div class="frame">
                 <img class="frame-art" src="img/Assignemnt1_(5x7).jpg" alt="Cropping and Resizing" />
                 <img class="frame-png" src="img/img_frame.png" alt="" aria-hidden="true" />
               </div>
-
               <div class="work-description">
                 <h3 class="work-title">Cropping and Resizing</h3>
                 <p class="work-date">February 10th</p>
               </div>
             </a>
 
-            <!-- Card 3 -->
             <a class="work-card" href="reflections/nesrine_malik_reflection.html">
               <div class="frame">
                 <img class="frame-art" src="img/the_guardian_opinion.png" alt="Nesrine Malik Reflection" />
                 <img class="frame-png" src="img/img_frame.png" alt="" aria-hidden="true" />
               </div>
-
               <div class="work-description">
                 <h3 class="work-title">Nesrine Malik Reflection</h3>
                 <p class="work-date">February 24th</p>
               </div>
             </a>
 
-            <!-- Card 4 -->
             <a class="work-card" href="assignments/week3_part1.html">
               <div class="frame">
                 <img class="frame-art" src="img/week3-img1-part1(after).jpg" alt="Part 1: Depth of Field" />
                 <img class="frame-png" src="img/img_frame.png" alt="" aria-hidden="true" />
               </div>
-
               <div class="work-description">
                 <h3 class="work-title">Part 1: Depth of Field</h3>
                 <p class="work-date">February 24th</p>
               </div>
             </a>
 
-            <!-- Card 5 -->
             <a class="work-card" href="assignments/week3_part2.html">
               <div class="frame">
                 <img class="frame-art" src="img/week3-img2-part2(after).jpg" alt="Part 2: Editing in Camera Raw" />
                 <img class="frame-png" src="img/img_frame.png" alt="" aria-hidden="true" />
               </div>
-
               <div class="work-description">
                 <h3 class="work-title">Part 2: Editing in Camera Raw</h3>
                 <p class="work-date">February 24th</p>
               </div>
             </a>
+
           </div>
         </div>
+
         <p class="swipe-hint" aria-hidden="true"> ← Swipe to explore → </p>
       </div>
     </section>
   </main>
 
+  <!-- ===== Footer ===== -->
   <footer class="site-footer">
-    <div class="footer-inner">
+    <div class="footer-inner"
+         data-aos="fade-up"
+         data-aos-duration="900"
+         data-aos-offset="120">
       <p class="footer-copy"> © 2026 Yaritza Yanez. Student Portfolio. </p>
-      <a class="footer-link" href="https://www.linkedin.com/in/yaritza-yanez-b24bbb239/" target="_blank" rel="noopener noreferrer"> LinkedIn </a>
+      <a class="footer-link"
+         href="https://www.linkedin.com/in/yaritza-yanez-b24bbb239/"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
     </div>
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      easing: "ease-out-cubic"
+    });
+  </script>
 </body>
 </html>
