@@ -194,3 +194,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+// LIGHTBOX FOR ASSIGNMENT IMAGES
+document.querySelectorAll('.assignment-img-1920, .assignment-img-5x7, .assignment-img-purple')
+  .forEach(img => {
+    img.style.cursor = 'zoom-in';
+
+    img.addEventListener('click', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+
+      lightboxImg.src = img.src;
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+    });
+  });
+
+document.getElementById('lightbox').addEventListener('click', () => {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+});

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Part 1 • Depth of Field • Yaritza Yanez</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Anton&family=Rozha+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="../index.html#home">Portfolio</a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#creative">Creative Statement</a>
+        <a href="../index.html#featured">Featured Work</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="nav-mobile" aria-label="Mobile Primary">
+        <a data-close href="../index.html#home">Home</a>
+        <a data-close href="../index.html#creative">Creative Statement</a>
+        <a data-close href="../index.html#featured">Featured Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Assignment Page ===== -->
+  <main id="week3-depth-of-field">
+    <section class="assignment-page-purple">
+      <div class="container assignment-inner-purple">
+        <h1 class="page-title underline section-title--light"> Part 1: Depth of Field</h1>
+        
+        <div class="assignment-grid-purple">
+          <!-- LEFT: BEFORE -->
+          <div class="assignment-media-purple">
+            <figure class="assignment-figure-purple">
+              <img class="assignment-img-1920" src="../img/week3-img1(before).JPG" alt="Before Depth of Field" />
+              <figcaption class="assignment-caption-purple">Before</figcaption>
+            </figure>
+
+            <a class="download-btn-purple" href="../img/week3-img1(before).JPG" download="Depth-of-Field-Before-Yaritza-Yanez.jpg"> Download Image </a>
+          </div>
+
+          <!-- RIGHT: AFTER -->
+          <div class="assignment-media-purple">
+            <figure class="assignment-figure-purple">
+              <img class="assignment-img-1920" src="../img/week3-img1-part1(after).jpg" alt="After Depth of Field" />
+              <figcaption class="assignment-caption-purple">After</figcaption>
+            </figure>
+
+            <a class="download-btn-purple" href="../img/week3-img1-part1(after).jpg" download="Depth-of-Field-After-Yaritza-Yanez.jpg"> Download Image</a>
+          </div>
+
+        </div>
+
+        <!-- ===== Description ===== -->
+        <div class="assignment-text-purple-wide">
+          <p>
+            I selected this image because the subject is positioned clearly in the foreground against a detailed background of posters and wall textures, which made it well suited for demonstrating a shallow depth-of-field effect. 
+            In Photoshop, I used the Field Blur tool to keep the person sharp while gradually softening the surrounding wall and posters so they recede visually and no longer compete for attention. 
+            I made these adjustments to simulate the look of a wide-aperture lens, where only the main subject remains in focus and the background appears softer. 
+            This helps guide the viewer’s eye directly to the subject and creates stronger separation between the foreground and background, giving the image a more intentional photographic focus.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy"> © 2026 Yaritza Yanez. Student Portfolio. </p>
+      <a class="footer-link"
+         href="https://www.linkedin.com/in/yaritza-yanez-b24bbb239/"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

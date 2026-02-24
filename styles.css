@@ -681,7 +681,7 @@ body{
   width: min(100%, 960px);
   aspect-ratio: 16 / 9;
   height: auto;
-  
+
   border: 6px solid #fff;
   background: transparent;
   object-fit: cover;
@@ -776,4 +776,28 @@ body{
   .assignment-text-purple{
     max-width: 680px;
   }
+}
+
+/* LIGHTBOX OVERLAY */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.lightbox.open{
+  display: flex;
+}
+
+.lightbox img{
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border: 8px solid #fff;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
