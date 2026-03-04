@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photomontage • Yaritza Yanez</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Anton&family=Rozha+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="../index.html#home">Portfolio</a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#creative">Creative Statement</a>
+        <a href="../index.html#featured">Featured Work</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="nav-mobile" aria-label="Mobile Primary">
+        <a data-close href="../index.html#home">Home</a>
+        <a data-close href="../index.html#creative">Creative Statement</a>
+        <a data-close href="../index.html#featured">Featured Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Assignment Page ===== -->
+  <main id="week3-depth-of-field">
+    <section class="assignment-page-purple">
+      <div class="container assignment-inner-purple">
+        <h1 class="page-title underline section-title--light">Photomontage</h1>
+        
+        <div class="assignment-grid-purple">
+          <!-- LEFT: BEFORE -->
+          <div class="assignment-media-purple">
+            <figure class="assignment-figure-purple">
+              <img class="assignment-img-5x7 lightbox-img" src="../img/photomontage.png" alt="Photomontage" />
+              <figcaption class="assignment-caption-purple">Photomontage</figcaption>
+            </figure>
+
+            <a class="download-btn-purple" href="../img/photomontage.png" download="Photomontage-Yaritza-Yanez.png"> Download Image </a>
+          </div>
+
+          <!-- RIGHT: AFTER -->
+          <div class="assignment-media-purple">
+            <figure class="assignment-figure-purple">
+              <img class="assignment-img-5x7 lightbox-img" src="../img/img-layers.png" alt="Image Layers" />
+              <figcaption class="assignment-caption-purple">After</figcaption>
+            </figure>
+
+            <a class="download-btn-purple" href="../img/img-layers.png" download="Image-Layers-Yaritza-Yanez.png"> Download Image</a>
+          </div>
+
+        </div>
+
+        <!-- ===== Description ===== -->
+        <div class="assignment-text-purple-wide">
+          <p>
+            My photomontage originally started off as an enhanced scenery in a forest with flowers that grow abnormally tall. 
+            But then it took a shift to explore the idea of a connection between nature and the future. 
+            In the image you see a vibrant garden filled with flowers and butterflies that leads through a stone archway into a futuristic city. 
+            I initially placed my image in a garden to show a contrast between the beauty of nature and then the entry way into our future and what it will slowly begin to look like. 
+            The futuristic side shows the advanced architecture of a modern city, what we picture 100 years will look like from now. 
+            The pathway and archway is like a bridge between two completely different environments. 
+            It gives off a sense of the past and the future. 
+            The bright colors and layered elements help guide the viewer’s eye from the foreground flowers toward the city skyline in the distance.
+        </p>
+
+        <p>
+            To create this image I combined several photographs and graphic elements using non-destructive editing techniques in Photoshop. 
+            I first started by looking for the images that I wanted to use on adobe stock then sketching out an idea in my head of how I want to place them. 
+            Each image was placed on its own layer and adjusted using the select tool and layer masking. 
+            This allowed me to refine the edges and positioning of the images and get rid of any backgrounds that I did not want to include. 
+            On some images, mainly the archway and the floral ground, I changed the color hue and also the vibrance to try to get them to blend as closely as possible together. 
+            The images I used in this composition came from Adobe Stock. 
+            Throughout the process of creating the photomontage I explored ideas such as masking, layering, and contrast to put all of my images together. 
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy"> © 2026 Yaritza Yanez. Student Portfolio. </p>
+      <a class="footer-link"
+         href="https://www.linkedin.com/in/yaritza-yanez-b24bbb239/"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
