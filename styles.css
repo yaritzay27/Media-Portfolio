@@ -656,6 +656,19 @@ body{
   background: transparent;
 }
 
+.assignment-img-purple-eye{
+  width: clamp(280px, 38vw, 480px);
+  height: auto;
+  display:block;
+  padding: 25px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 6px solid #fff;
+  background: rgba(255, 255, 255, 0.75);
+}
+
 .assignment-img-5x7{
   width: 480px;
   height: 672px;
@@ -799,6 +812,7 @@ body{
   max-height: 90vh;
   object-fit: contain;
   border: 8px solid #fff;
+  background-color: rgba(255, 255, 255, 0.75);
   box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 

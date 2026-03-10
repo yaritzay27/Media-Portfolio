@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 1 • Cropping & Resizing • Yaritza Yanez</title>
+
+  <!-- ----- Fonts ----- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Anton&family=Rozha+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="../index.html#home">Portfolio</a>
+
+      <!-- Desktop/Tablet nav -->
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#creative">Creative Statement</a>
+        <a href="../index.html#featured">Featured Work</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="nav-mobile" aria-label="Mobile Primary">
+        <a data-close href="../index.html#home">Home</a>
+        <a data-close href="../index.html#creative">Creative Statement</a>
+        <a data-close href="../index.html#featured">Featured Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Assignment Page ===== -->
+  <main id="assignment1">
+    <section class="assignment-page-purple">
+      <div class="container assignment-inner-purple">
+        <h1 class="page-title underline section-title--light">Illustrator Eye</h1>
+
+        <div class="assignment-grid-purple">
+          <!-- LEFT: text -->
+          <div class="assignment-text-purple">
+            <p>
+              To create this illustration, I began by researching reference images of eyelashes to find a style that I liked. 
+              Once I found a design that stood out to me, I used Adobe Illustrator’s Pen Tool to carefully trace and recreate the eyelashes. 
+              While following the reference closely, I also made small adjustments and added my own stylistic touches so the final design would feel original rather than copied.
+              Navigating the tools were difficult at first but then I began to get used to them and I was able to create the design I had envisioned. 
+              Along with the pen tool, I also used the smooth tool to makesure the lines were clean and polished, which helped give the eyelashes a more refined and professional look.
+            </p>
+
+            <p>
+                For the eye itself, I drew inspiration from anime-style eyes, which are known for their detailed highlights, strong shapes, and expressive appearance. 
+                I incorporated layered colors, reflections, and light effects to give the eye more depth and visual interest. 
+                Anime eyes often include multiple highlights and gradients, which helped make the eye look more dynamic and visually engaging.
+            </p>
+
+            <p>
+                By combining the eyelash reference with the stylized detail of anime eyes, I was able to create an illustration that balances precision, detail, and artistic style.
+            </p>
+          </div>
+
+          <!-- RIGHT: image -->
+          <div class="assignment-media-purple">
+            <figure class="assignment-figure-purple">
+              <img class="assignment-img-purple-eye lightbox-img" src="../img/eye-design.png" alt="5x7 - Hunter College street photo" />
+              <figcaption class="assignment-caption-purple">Illustrator Eye</figcaption>
+            </figure>
+
+            <a class="download-btn-purple" href="../img/eye-design.png" download="Hunter-College-5x7-Yaritza-Yanez.jpg">Download Image</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy"> © 2026 Yaritza Yanez. Student Portfolio. </p>
+      <a class="footer-link" href="https://www.linkedin.com/in/yaritza-yanez-b24bbb239/" target="_blank" rel="noopener noreferrer"> LinkedIn </a>
+    </div>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
