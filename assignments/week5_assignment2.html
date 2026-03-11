@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Japanese Home Illustration • Yaritza Yanez</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Anton&family=Rozha+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="../index.html#home">Portfolio</a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#creative">Creative Statement</a>
+        <a href="../index.html#featured">Featured Work</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="nav-mobile" aria-label="Mobile Primary">
+        <a data-close href="../index.html#home">Home</a>
+        <a data-close href="../index.html#creative">Creative Statement</a>
+        <a data-close href="../index.html#featured">Featured Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Assignment Page ===== -->
+  <main id="week3-depth-of-field">
+    <section class="assignment-page-purple">
+      <div class="container assignment-inner-purple">
+        <h1 class="page-title underline section-title--light">Japanese Home Illustration</h1>
+        
+        <div class="assignment-grid-purple">
+          <!-- LEFT: BEFORE -->
+          <div class="assignment-media-purple">
+            <figure class="assignment-figure-purple">
+              <img class="assignment-img-1920 lightbox-img" src="../img/japanese-before.png" alt="Before Illustration" />
+              <figcaption class="assignment-caption-purple">Before</figcaption>
+            </figure>
+
+            <a class="download-btn-purple" href="../img/japanese-before.png" download="Japanese-Home-Before-Yaritza-Yanez.png"> Download Image </a>
+          </div>
+
+          <!-- RIGHT: AFTER -->
+          <div class="assignment-media-purple">
+            <figure class="assignment-figure-purple">
+              <img class="assignment-img-1920 lightbox-img" src="../img/japanese-after.png" alt="After Illustration" />
+              <figcaption class="assignment-caption-purple">After</figcaption>
+            </figure>
+
+            <a class="download-btn-purple" href="../img/japanese-after.png" download="Japanese-Home-After-Yaritza-Yanez.png"> Download Image</a>
+          </div>
+
+        </div>
+
+        <!-- ===== Description ===== -->
+        <div class="assignment-text-purple-wide">
+          <p>
+            I chose this Japanese temple environment because I love Japanese architecture and the peaceful scenery around the water. 
+            The bright red structure and the torii gate in the background made the image visually interesting and gave me clear shapes to work with in Illustrator. 
+            I first imported the photograph into Adobe Illustrator and placed it on its own layer, then locked that layer so I could use it as a guide. 
+            Using the Pen Tool and shape tools, I traced the main parts of the building such as the roof, pillars, railings, and windows. Leaving the people and background out to give the design contrast.
+            I separated different elements into layers for the foreground, middle ground, and background to keep the design organized. 
+            Instead of copying every detail, I simplified the environment and transformed it into a cleaner illustrated style. 
+            This process helped turn the realistic photograph into a simplified vector illustration while still keeping the recognizable structure of the original environment.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy"> © 2026 Yaritza Yanez. Student Portfolio. </p>
+      <a class="footer-link"
+         href="https://www.linkedin.com/in/yaritza-yanez-b24bbb239/"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
