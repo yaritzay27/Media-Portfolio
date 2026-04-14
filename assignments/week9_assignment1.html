@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eye Animation • Yaritza Yanez</title>
+
+  <!-- ----- Fonts ----- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Anton&family=Rozha+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="../index.html#home">Portfolio</a>
+
+      <!-- Desktop/Tablet nav -->
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#creative">Creative Statement</a>
+        <a href="../index.html#featured">Featured Work</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="nav-mobile" aria-label="Mobile Primary">
+        <a data-close href="../index.html#home">Home</a>
+        <a data-close href="../index.html#creative">Creative Statement</a>
+        <a data-close href="../index.html#featured">Featured Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Assignment Page ===== -->
+  <main id="assignment1">
+    <section class="assignment-page-purple">
+      <div class="container assignment-inner-purple">
+        <h1 class="page-title underline section-title--light">Eye Animation</h1>
+
+        <div class="assignment-grid-purple">
+          <!-- LEFT: text -->
+          <div class="assignment-text-purple">
+            <p>
+              To create this animation, I started by designing more eyes in Adobe Illustrator, I changed the pupil of each eye. 
+              Once I had the design finalized, I exported the individual elements (the eye and the eyelashes) as separate PNG files with transparent backgrounds. 
+              I then imported these elements into Adobe Photoshop and used the Timeline feature to create a frame-by-frame animation. 
+              I duplicated the eye layer and adjusted the position of the eyelashes in each frame to create the illusion of blinking. 
+              I also added some subtle movements to the eye itself, such as slight shifts in position and changes in the shape of the pupil, to make the animation feel more dynamic and lifelike. 
+              Finally, I exported the animation as a GIF file, which allowed me to easily share it online and showcase my work.
+            </p>
+
+            <p>Inspired by the Blyth dolls, I wanted to create an animation that captured the whimsical and slightly eerie quality of these dolls.</p>
+          </div>
+
+          <!-- RIGHT: image -->
+          <div class="assignment-media-purple">
+            <figure class="assignment-figure-purple">
+              <img class="assignment-img-purple-eye lightbox-img" src="../img/eye-design-animation.gif" alt="5x7 - Hunter College street photo" />
+              <figcaption class="assignment-caption-purple">Eye Animation</figcaption>
+            </figure>
+
+            <a class="download-btn-purple" href="../img/eye-design-animation.gif" download="Hunter-College-5x7-Yaritza-Yanez.gif">Download Animation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy"> © 2026 Yaritza Yanez. Student Portfolio. </p>
+      <a class="footer-link" href="https://www.linkedin.com/in/yaritza-yanez-b24bbb239/" target="_blank" rel="noopener noreferrer"> LinkedIn </a>
+    </div>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="../script.js"></script>
+
+</body>
+</html>
