@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Assignment 10 • Interactive Story Assignment</title>
+
+  <!-- ----- Fonts ----- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Anton&family=Rozha+One&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="../index.html#home">Portfolio</a>
+
+      <!-- Desktop/Tablet nav -->
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#creative">Creative Statement</a>
+        <a href="../index.html#featured">Featured Work</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <nav class="nav-mobile" aria-label="Mobile Primary">
+        <a data-close href="../index.html#home">Home</a>
+        <a data-close href="../index.html#creative">Creative Statement</a>
+        <a data-close href="../index.html#featured">Featured Work</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Assignment Page ===== -->
+  <main id="assignment1">
+    <section class="assignment-page-purple">
+      <div class="assignment-inner-purple">
+        <h1 class="page-title section-title--light">Part 1: Interactive Story Assignment</h1>
+
+        <div class="assignment-grid-purple-center container">
+          <!-- CENTER: image -->
+          <div class="assignment-media-purple">
+            <figure class="assignment-figure-purple">
+              <img class="assignment-img-1920 lightbox-img" src="../img/false-frames-crime-scene.jpeg" alt="False frames" />
+            </figure>
+          </div>
+        </div>
+
+        <div class="assignment-text-purple-wide">
+          <h2>Part 1: Story Description - False Frames</h2>
+          <h3>The truth can set you free...or get you locked up.</h3>
+
+          <p>
+            My interactive story is a crime-based narrative set in New York City, where the user plays as a protagonist who witnesses a murder outside their apartment late at night. 
+            After seeing the crime, the protagonist becomes a suspect and must navigate a series of decisions across different locations in the city, including an alleyway, subway system, apartment, police station, and surrounding streets.
+            The goal of the story is to gather enough information and make the right decisions to prove innocence while avoiding actions that increase suspicion.
+          </p>
+
+          <p>
+            The story unfolds through multiple branching paths that allow the user to investigate the crime, interact with characters, and decide how to respond to law enforcement. 
+            Players can choose whether to run, report the crime, search for clues, or trust certain individuals. 
+            These decisions affect how much evidence they collect and how they are perceived by others. 
+            While the story contains many branching paths and moments of exploration, all paths ultimately lead to one of two endings: either the protagonist successfully proves their innocence and the real murderer is caught, or they are wrongly accused and taken to prison. 
+            The structure encourages replayability by allowing multiple ways to reach each outcome.
+          </p>
+
+          <p>
+            The story has two possible endings: the protagonist proves their innocence and the real murderer is caught, or the protagonist is wrongly accused and sent to prison for a crime they did not commit.
+          </p>
+
+          <h2>Narrative Map</h2>
+
+          <pre class="story-map">
+            START: Apartment at Night
+            ↓
+            Hear a loud argument outside your window
+
+            ├── A) Look outside
+            │   ↓
+            │   Witness the murder in the alley
+            │   ↓
+            │   ├── A1) Go outside to investigate
+            │   │   ↓
+            │   │   Find a dropped clue near the scene
+            │   │   ↓
+            │   │   ├── Take the clue
+            │   │   │   ↓
+            │   │   │   Sirens begin approaching in the distance
+            │   │   │   ↓
+            │   │   │   ├── Run from the scene
+            │   │   │   │   ↓
+            │   │   │   │   Enter the subway to avoid being seen
+            │   │   │   │   ↓
+            │   │   │   │   ├── Talk to nervous witness → They describe the real killer → ENDING 1: Innocent
+            │   │   │   │   └── Ignore witness → Leave without information → ENDING 2: Wrongly Accused
+            │   │   │   │
+            │   │   │   └── Stay at the scene
+            │   │   │       ↓
+            │   │   │       Police arrive and question you
+            │   │   │       ↓
+            │   │   │       ├── Cooperate with police → Provide clue and clear story → ENDING 1: Innocent
+            │   │   │       └── Panic or lie → Inconsistent answers → ENDING 2: Wrongly Accused
+            │   │   │
+            │   │   └── Leave the clue
+            │   │       ↓
+            │   │       ├── Return later → Scene cleared, no evidence → ENDING 2: Wrongly Accused
+            │   │       └── Avoid the area → Never gather proof → ENDING 2: Wrongly Accused
+            │   │
+            │   └── A2) Call police from inside
+            │       ↓
+            │       ├── Stay on the phone → Calm and detailed report → ENDING 1: Innocent
+            │       └── Hang up early → Suspicious behavior → ENDING 2: Wrongly Accused
+            │
+            └── B) Ignore the disturbance
+                ↓
+                The next morning, police question you
+                ↓
+                ├── Be honest → Cooperate and explain → ENDING 1: Innocent
+                └── Lie or act suspicious → Story doesn’t add up → ENDING 2: Wrongly Accused
+          </pre>
+
+          <h2>Endings</h2>
+
+          <p>
+            <strong>Ending 1: Innocent</strong> - The protagonist gathers enough evidence, makes the right choices, and helps reveal the real murderer. The killer is caught and the protagonist is cleared.
+          </p>
+
+          <p>
+            <strong>Ending 2: Wrongly Accused</strong> - The protagonist makes choices that increase suspicion or fails to collect enough evidence. They are arrested and sent to prison for a murder they did not commit.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy"> © 2026 Yaritza Yanez. Student Portfolio. </p>
+      <a class="footer-link"
+         href="https://www.linkedin.com/in/yaritza-yanez-b24bbb239/"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
