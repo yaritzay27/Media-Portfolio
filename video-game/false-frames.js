@@ -116,7 +116,7 @@ const NODES = {
     scene: 'alley', rain: true,
     location: '42ND STREET — BELOW', time: '2:49 AM',
     speaker: 'NARRATOR',
-    text: "You peer through the rain-streaked glass. In the alley below, two figures struggle. A flash of metal. A scream cut short. The smaller figure crumples. The larger one sprints away into the dark, hood up, face hidden. You've just witnessed a murder.",
+    text: "You peer through the rain-streaked glass. In the alley below, two figures struggle. A flash of metal. A scream cut short. The smaller figure crumples. The larger one stares at the dead body then shortly sprints away. You've just witnessed a murder.",
     choices: [
       { label: 'Go outside to investigate', next: 'go_outside', suspicion: 0 },
       { label: 'Call 911 from inside', next: 'call_police_inside', suspicion: 0 }
