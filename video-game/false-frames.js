@@ -47,7 +47,7 @@ const SCENE_IMAGES = {
   alley: 'img/alley-death.png',
   lighter_clue: 'img/lighter-clue.png',
   evidence_taken: 'img/evidence-taken.png',
-  caught: 'img/caught.jpeg',
+  caught: 'img/hands-up.png',
   police_station: 'img/police-station.jpeg',
   street_morning: 'img/police-sirens.jpeg',
   subway: 'img/subway-scene.png',
