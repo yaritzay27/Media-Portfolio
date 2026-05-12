@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>False Frames</title>
+<link rel="stylesheet" href="false-frames.css">
+</head>
+<body>
+
+<div id="game">
+  <!-- FADE OVERLAY -->
+  <div class="fade-overlay" id="fade"></div>
+
+  <!-- TITLE SCREEN -->
+  <div class="screen active" id="title-screen">
+    <div class="title-image-scene" aria-hidden="true"></div>
+    <div class="title-art">
+      <div class="game-title">FALSE FRAMES</div>
+      <div class="game-subtitle">— A CRIME NARRATIVE —</div>
+    </div>
+    <div class="title-tagline">The truth can set you free... or get you locked up.</div>
+    <button class="menu-btn" id="start-btn">START GAME</button>
+    <div class="title-datetime">
+      New York City, 2:47 AM
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="screen" id="game-screen">
+    <div class="hud-bar">
+      <div class="hud-title">FALSE FRAMES</div>
+      <div class="hud-info" id="hud-location">NEW YORK APT - 2:47 AM</div>
+    </div>
+    <div class="scene-bg" id="scene-container">
+      
+      <div class="vignette"></div>
+      <div class="scene-overlay"></div>
+      <div class="location-tag" id="location-tag">NEW YORK APT</div>
+      <div class="time-tag" id="time-tag">2:47 AM</div>
+      <div class="suspicion-bar">
+        <div class="suspicion-label">SUSPICION</div>
+        <div class="suspicion-track">
+          <div class="suspicion-fill" id="suspicion-fill"></div>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-area">
+      <div class="clue-pills" id="clue-pills"></div>
+      <div class="dialog-box">
+        <div class="speaker-name" id="speaker-name">NARRATOR</div>
+        <div class="dialog-text" id="dialog-text">
+          <span id="dialog-content"></span><span class="dialog-cursor" id="dialog-cursor"></span>
+        </div>
+      </div>
+      <div class="choices-box" id="choices-box"></div>
+    </div>
+  </div>
+
+  <!-- ENDING SCREEN -->
+  <div class="screen" id="ending-screen">
+    <div class="ending-image-scene" aria-hidden="true"></div>
+    <div class="ending-title" id="ending-title">ENDING</div>
+    <div class="ending-text" id="ending-text"></div>
+    <div class="ending-stats" id="ending-stats"></div>
+    <button class="menu-btn" id="replay-btn">PLAY AGAIN</button>
+  </div>
+</div>
+
+<script src="false-frames.js"></script>
+</body>
+</html>
